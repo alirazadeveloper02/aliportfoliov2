@@ -3,6 +3,7 @@ export const PERSONAL_INFO = {
     name: "Ali Raza",
     image: '',
     title: 'Full Stack Developer',
+    resume: '/Muhammad-Ali-Raza.pdf',
     phone: '0339 9878692',
     email: 'alirazadeveloper.02@gamil.com',
     tagline: 'Turning your vision into reality with clean, efficient, scalable code.',
@@ -12,8 +13,8 @@ export const PERSONAL_INFO = {
 }
 
 export const SOCIAL_LINKS = {
-    github: '',
-    linkedin: '',
+    github: 'https://github.com/alirazadeveloper02',
+    linkedin: 'https://www.linkedin.com/in/muhammad-ali-raza-2470a139a/',
     instagram: '',
     twitter: '',
     facebook: '',
