@@ -72,6 +72,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/my-image.png" />
+        <meta name="google-site-verification" content="i4uMsW0sMxCpghMtsx7x9yV7xAmOOe_QFrj7yZN1c6U" />
       </head>
       <body>
         {children}
