@@ -61,9 +61,9 @@ const Navbar = () => {
 
             <div className="hidden md:flex items-center gap-2">
               <button
-                onClick={() => handleNavClick('contact')}
+                onClick={() => window.open(PERSONAL_INFO.resume, '_blank')}
                 className='px-7 py-3.5 bg-white text-[#212121] font-medium text-base rounded-[17px] border border-white hover:bg-white/90 transition-all duration-300'>
-                Hire Me
+                Download Resume
               </button>
             </div>
             <button 
@@ -91,10 +91,10 @@ const Navbar = () => {
               </button>
 ))}
               <button
-              onClick={() => handleNavClick('contact')}
+              onClick={() => window.open(PERSONAL_INFO.resume, '_blank')}
               className="w-full px-6 py-3 bg-white text-[#212121] font-medium text-base rounded-[17px] border border-white duration-300 hover:bg-white/70 transition-all mt-2 "
               >
-                Hire Me
+                Download Resume
               </button>
             
            </div> 
