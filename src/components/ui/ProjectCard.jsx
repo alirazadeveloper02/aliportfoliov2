@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => {
         <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 " />
         <div className="absolute bottom-4 right-4 flex items-center gap-3">
           {demoUrl && (
-            <a href={demoUrl} target='_blank' rel='noopener noreferrer' title='View Demo' className='p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 hover:bg-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-0'>
+            <a href={demoUrl} target='_blank' rel='noopener noreferrer' title='View Demo' className='p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 hover:bg-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-90'>
               <ExternalLink className='w-6 h-6 text-primary' />
             </a>
           )}

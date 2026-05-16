@@ -140,16 +140,16 @@ const About = () => {
           <FadeIn delay={400}>
             <div className="flex flex-col gap-8 items-center">
               <div className="text-center">
-                <h3 className="text-2xl font-semibold text-white mb-2">
+                <h2 className="text-4xl lg:text-5xl font-normal leading-tight text-white">
                   Tech Stack & Expertise
-                </h3>
+                </h2>
                 <p className="text-sm text-white/70">
                   I have experience with a wide range of technologies and tools, including:
                 </p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 w-full max-w-4xl">
                 {skills.map((skill, index) => (
-                  <div key={index} className="group relative bg-white/10 hover:bg-white/20 border border-white/10  hover:border-primary/50 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:scale-105">
+                  <div key={index} className="group relative bg-white/10 hover:bg-white/20 border border-white/10  hover:border-primary/50 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 h-30 transition-all duration-300 hover:scale-105">
                     <skill.icon className='text-3xl text-primary' />
                     <div className="text-sm text-white/70 font-medium text-center">
                       {skill.name}

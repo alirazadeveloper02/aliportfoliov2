@@ -1,8 +1,44 @@
 import React from 'react'
 import { skills } from '../../data/skills'
-import * as Icons from 'lucide-react'
+import { Code2, Cloud, Network, Smartphone, Sparkles } from 'lucide-react'
+import {
+    SiCss,
+    SiExpress,
+    SiFigma,
+    SiGithub,
+    SiHtml5,
+    SiJavascript,
+    SiMongodb,
+    SiNextdotjs,
+    SiNodedotjs,
+    SiReact,
+    SiRedux,
+    SiTailwindcss,
+    SiTypescript,
+    SiWordpress,
+} from 'react-icons/si'
 import FadeIn from '../animation/FadeIn'
 const Skills = () => {
+    const skillIconMap = {
+        HTML5: SiHtml5,
+        CSS3: SiCss,
+        JavaScript: SiJavascript,
+        ReactJS: SiReact,
+        NextJS: SiNextdotjs,
+        TypeScript: SiTypescript,
+        Redux: SiRedux,
+        'Tailwind CSS': SiTailwindcss,
+        'Node.js': SiNodedotjs,
+        'Express.js': SiExpress,
+        MongoDB: SiMongodb,
+        'REST APIs': Network,
+        'Git & GitHub': SiGithub,
+        'Responsive Design': Smartphone,
+        Figma: SiFigma,
+        AWS: Cloud,
+        WordPress: SiWordpress,
+    }
+
     const skillCategories = {
         'Frontend Development': [
             skills.find(s => s.name === 'HTML5'),
@@ -25,6 +61,7 @@ const Skills = () => {
             skills.find(s => s.name === 'Responsive Design'),
             skills.find(s => s.name === 'Figma'),
             skills.find(s => s.name === 'AWS'),
+            skills.find(s => s.name === 'WordPress'),
         ].filter(Boolean),
     }
 
@@ -57,7 +94,7 @@ const Skills = () => {
                 <FadeIn delay={100}>
                     <div className="text-center mb-16">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 mb-4 rounded-full">
-                            <Icons.Sparkles className='w-6 h-6 fill-primary text-primary' />
+                            <Sparkles className='w-6 h-6 fill-primary text-primary' />
                             <span className=''>My Expertise</span>
                         </div>
                         <h2 className="text-4xl lg:text-5xl text-white font-normal mb-4">
@@ -76,7 +113,7 @@ const Skills = () => {
                                 </div>
                                 <div className="space-y-6">
                                     {categorySkills.map((skill, skillIndex) => {
-                                        const IconComponent = Icons[skill.icon] || Icons.Code2
+                                        const IconComponent = skillIconMap[skill.name] || Code2
                                         const proficiency = getproficiencyLevel(skill.level)
                                         return (
                                             <div key={skill.id || skillIndex} className="space-y-2">

@@ -32,8 +32,8 @@ const Navbar = () => {
           ? 'bg-black/30 backdrop-blur-lg' : 'bg-transparent'}`} style={{ transform: 'translate3d(0, 0, 0)' }}
       >
 
-        <div className="max-w-[1320px]  mx-auto px-5 py-5">
-          <div className="flex items-center justify-between">
+        <div className="max-w-[1320px] mx-auto px-5 ">
+          <div className="flex items-center justify-between h-20">
 
             <div className="flex items-center gap-4">
               <Code className="w-6 h-6 text-primary" />
@@ -49,9 +49,9 @@ const Navbar = () => {
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`test-base font-medium transition-all duration-300 ${activeSection === link.id
-                    ? 'text-white'
-                    : 'text-whit/70 hover:text-white'
+                  className={`test-base text-lg font-medium transition-all duration-300 ${activeSection === link.id
+                    ? 'text-primary text-xl '
+                    : 'text-whit/70 hover:text-primary cursor-pointer '
                     }`}
                 >
                   {link.label}
@@ -76,15 +76,15 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className={`md:hidden duration-300 transition-all overflow-hidden ${ isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0' }`}>
-          <div className='Bg-black/90 backdrop-blur-lg border-t border-white/20 px-5 py-6 space-y-3'>
+        <div className={`md:hidden duration-300 transition-all overflow-hidden ${ isMenuOpen ? 'max-h-120 opacity-100' : 'max-h-0 opacity-100' }`}>
+          <div className='Bg-black/90 backdrop-blur-xl bg-black border-t border-white/20 px-5 space-y-3'>
             {NAV_LINKS.map((link) => (
               <button
               key={link.id}
               onClick={() => handleNavClick(link.id)}
-              className={`block w-full text-left px-4 py-3 rounded-lg font-medium duration-300 transition-all 
+              className={`block w-full text-left px-3 py-2 rounded-lg font-medium duration-300 transition-all
               ${activeSection === link.id 
-              ? 'text-white bg-white/30' 
+              ? 'text-white bg-primary' 
               : 'text-white/70 hover:text-white hover:bg-white/70'}`}
               >
                 {link.label}

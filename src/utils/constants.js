@@ -22,10 +22,10 @@ export const SOCIAL_LINKS = {
 }
 
 export const HOME_STATS = [
-    { label: 'Projects', value: 10 },
-    { label: 'Experience', value: 2 },
-    { label: 'Clients', value: 5 },
-    { label: 'Technologies', value: 8 },
+    { label: 'Projects', value: '10+' },
+    { label: 'Experience', value: '2+Years' },
+    { label: 'Clients', value: '5+' },
+    { label: 'Technologies', value: '15+' },
 ]
 
 export const ABOUT_STATS = [
@@ -39,7 +39,7 @@ export const NAV_LINKS = [
     { id: 'about', label: 'About'},
     { id: 'skills', label: 'Skills'},
     { id: 'projects', label: 'Projects'},
-    { id: 'services', label: 'services'},
+    { id: 'services', label: 'Services'},
     { id: 'testimonials', label: 'Testimonials'},
     { id: 'contact', label: 'Contact'},
 ]

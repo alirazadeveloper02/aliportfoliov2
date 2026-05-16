@@ -1,7 +1,6 @@
 "use client"; // <-- Must be first line in the file
 import React, { useState } from 'react'
 import { ChevronDown, Star } from 'lucide-react'
-import { SiReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiExpress, SiNodedotjs, SiMongodb } from 'react-icons/si'
 import { PERSONAL_INFO, HOME_STATS } from '../../utils/constants'
 import { scrollToSection } from '../../hooks/useScrSpy'
 import RadGradBg from '../background/RadGradBg'
@@ -32,7 +31,7 @@ const Hero = () => {
             </FadeIn>
             <FadeIn delay={200}>
               <p className='text-lg text-white/90 max-w-[550px] mb-6 '>
-                Building modern web applications with React, Next.js, and Tailwind CSS. Explore my projects and skills in frontend development.
+                Building modern web applications with React, Next.js, and Tailwind CSS. Explore my projects and skills in full stack development.
               </p>
             </FadeIn>
             <FadeIn delay={300}>
@@ -45,15 +44,15 @@ const Hero = () => {
               </button>
             </FadeIn>
             <FadeIn delay={400}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-full">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-full">
                 {HOME_STATS.map((stat, index) => (
                   <div key={index} className="text-left border-r border-white/70 pr-10 last:border-r-0">
-                    <div className="text-2xl font-normal text-primary mb-[8px] font-mono">
-                      {stat.value}
-                    </div>
-                    <p className="text-sm text-white leading-snug">
+                    <p className="text-lg mb-3 text-white leading-snug">
                       {stat.label}
                     </p>
+                    <div className="text-xl font-normal text-primary mb-[8px] font-mono">
+                      {stat.value}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -61,15 +60,14 @@ const Hero = () => {
           </div>
           <FadeIn delay={200}>
             <div className='relative'>
-              <div className='relative overflow-hidden rounded-2xl max-w-[500px] ml-auto group'>
-                <div className="absolute inset-0 overflow-hidden rounded-2xl">
-                  <div className='absolute inset-[-2px] bg-linear-to-r from-primary/30 via-primary/30 to-primary/30 animate-spin-slow rounded-2xl'></div>
-                </div> 
-                <div className="relative rounded-2xl overflow-hidden m-[2px] h-[calc(100%-2px)]">
+              <div className='relative overflow-hidden aspect-square max-w-[500px] ml-auto group'>
+                <div className="absolute inset-0 rounded-full border-10 border-dashed border-primary/60 animate-spin-slow pointer-events-none"></div>
+                
+                <div className="relative rounded-full overflow-hidden m-[2px] h-[calc(100%-2px)]">
                   <img src="/images/my-image.jpeg" alt="Developer"  className='w-full h-full object-cover' />
                 </div>
                 <div className="absolute bottom-5 left-5 z-20">
-                  <FadeIn delay={500}>
+                  {/* <FadeIn delay={500}>
                     <div className="flex items-center gap-4 bg-black/50 backdrop-blur-sm px-6 py-3 border border-white/30 rounded-full">
                       <div className="w-6 h-6 flex items-center justify-center hover:scale-100 transition-transform duration-300">
                         <SiReact className='w-full h-full text-primary' />
@@ -94,7 +92,7 @@ const Hero = () => {
                       </div>
 
                     </div>
-                  </FadeIn>
+                  </FadeIn> */}
                 </div>
               </div>
             </div>
