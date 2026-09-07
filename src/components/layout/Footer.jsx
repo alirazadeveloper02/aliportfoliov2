@@ -14,7 +14,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-black overflow-hidden border-t border-white/10"> 
+    <footer className="relative bg-black overflow-hidden border-t border-white/10">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 opacity-30 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 opacity-30 rounded-full blur-3xl" />
@@ -28,7 +28,7 @@ const Footer = () => {
               <p className="text-white/50 text-sm mb-6 leading-relaxed">{PERSONAL_INFO.tagline}</p>
               <div className="space-y-3">
                 <a href={`mailto:${PERSONAL_INFO.email}`}
-                 className="group flex items-center gap-3 p-3 bg-white/10 border border-white/30 rounded-2xl hover:bg-white/10 hover:border-primary/30 transition-all duration-300">
+                  className="group flex items-center gap-3 p-3 bg-white/10 border border-white/30 rounded-2xl hover:bg-white/10 hover:border-primary/30 transition-all duration-300">
                   <div className="p-2 bg-primary/10 rounded-xl">
                     <Mail className='w-6 h-6 text-primary' />
                   </div>
@@ -64,7 +64,7 @@ const Footer = () => {
                   <li key={link.id}>
                     <button onClick={() => scrollToSection(link.id)} className='group flex items-center gap-2 text-white/50 hover:text-primary transition-all duration-300 '>
                       <div className="w-2 h-2 rounded-full bg-white/30 group-hover:bg-primary transition-all duration-300" />
-                      <span className='text-sm'>{link.label}</span>
+                      <span className='text-md'>{link.label}</span>
                     </button>
                   </li>
                 ))}

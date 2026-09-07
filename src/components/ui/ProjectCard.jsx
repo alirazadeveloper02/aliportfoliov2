@@ -1,5 +1,5 @@
 import React from 'react'
-import { ExternalLink, Github, TrendingUp } from 'lucide-react'
+import { ExternalLink, Github, } from 'lucide-react'
 
 const ProjectCard = ({ project }) => {
   const { title, description, image, technologies, demoUrl, githubUrl } = project

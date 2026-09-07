@@ -96,6 +96,20 @@ body {
 
 
  
+/* Skill progress bar grow animation */
+@keyframes skillBarGrow {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--skill-target-width);
+  }
+}
+
+.skill-bar-animate {
+  animation: skillBarGrow 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);

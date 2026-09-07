@@ -67,7 +67,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="relative py-20 bg-black overflow-hidden">
+    <section id="contact" className="relative py-10 bg-black overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 opacity-30 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/20 opacity-30 rounded-full blur-3xl" />
@@ -174,7 +174,7 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="group relative bg-white/10 border border-white/20 rounded-2xl p-5 hover:border-primary/30 transition-all duration-300">
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-linear-to-r from-primary/10 to-primary/20 border border-primary/50 rounded-full">
@@ -183,7 +183,7 @@ const Contact = () => {
                     <div className="flex-1">
                       <p className="text-sm text-white/50 mb-2">Phone Number</p>
                       <p className="text-white font-medium">{PERSONAL_INFO.phone}</p>
-                      
+
                     </div>
                   </div>
                 </div>

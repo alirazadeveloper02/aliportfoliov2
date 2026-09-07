@@ -1,23 +1,9 @@
 import React from 'react'
 import { skills } from '../../data/skills'
 import { Code2, Cloud, Network, Smartphone, Sparkles } from 'lucide-react'
-import {
-    SiCss,
-    SiExpress,
-    SiFigma,
-    SiGithub,
-    SiHtml5,
-    SiJavascript,
-    SiMongodb,
-    SiNextdotjs,
-    SiNodedotjs,
-    SiReact,
-    SiRedux,
-    SiTailwindcss,
-    SiTypescript,
-    SiWordpress,
-} from 'react-icons/si'
+import { SiCss, SiExpress, SiFigma, SiGithub, SiHtml5, SiJavascript, SiMongodb, SiNextdotjs, SiNodedotjs, SiReact, SiRedux, SiTailwindcss, SiTypescript, SiWordpress, } from 'react-icons/si'
 import FadeIn from '../animation/FadeIn'
+import { useScrRev } from '../../hooks/useScrRev'
 const Skills = () => {
     const skillIconMap = {
         HTML5: SiHtml5,
@@ -84,8 +70,10 @@ const Skills = () => {
         }
         return colors[level] || 'text-gray-400 bg-gray-500/30 border-gray-500/50'
     }
+    const { ref: sectionRef, isVisible: sectionVisible } = useScrRev({ threshold: 0.15 })
+
     return (
-        <section id="skills" className='relative py-20 bg-black overflow-hidden'>
+        <section id="skills" ref={sectionRef} className='relative py-10 bg-black overflow-hidden'>
             <div className="absolute inset-0 overflow-hidden">
                 <div className='absolute top-1/4 left-0 w-96 h-96 bg-primary-10 rounded-full blur-3xl  opacity-50' />
                 <div className='absolute bottom-1/4 right-0 w-96 h-96 bg-primary-10 rounded-full blur-3xl  opacity-50' />
@@ -135,8 +123,14 @@ const Skills = () => {
                                                 </div>
 
                                                 <div className="relative h-2 bg-white/10 rounded-full overflow-hidden">
-                                                    <div className="absolute top-0 left-0 h-full bg-linear-to-r from-primary/10 to-primary/70 rounded-full transition-all duration-1000 ease-in-out"
-                                                        style={{ width: `${proficiency}%` }}></div>
+                                                    <div
+                                                        className={`absolute top-0 left-0 h-full bg-linear-to-r from-primary/10 to-primary/70 rounded-full ${sectionVisible ? 'skill-bar-animate' : ''}`}
+                                                        style={{
+                                                            '--skill-target-width': `${proficiency}%`,
+                                                            width: sectionVisible ? undefined : '0%',
+                                                            animationDelay: sectionVisible ? `${skillIndex * 80}ms` : '0ms',
+                                                        }}
+                                                    />
                                                 </div>
                                             </div>
                                         )

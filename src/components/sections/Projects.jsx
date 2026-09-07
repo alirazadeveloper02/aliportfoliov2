@@ -52,7 +52,7 @@ const Projects = () => {
     'Full Stack': Zap,
   }
   return (
-    <section id="projects" className='relative py-20 bg-black overflow-hidden'>
+    <section id="projects" className='relative py-10 bg-black overflow-hidden'>
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 right-0 w-96 h-96 bg-primary/20 opacity-30 rounded-full blur-3xl" />
         <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-primary/20 opacity-30 rounded-full blur-3xl" />
@@ -72,7 +72,7 @@ const Projects = () => {
         </FadeIn>
 
         <FadeIn delay={100}>
-          <div className="flex flex-wrap justify-center gap-3 mb-14">
+          <div className="flex flex-wrap justify-center gap-3 mb-9">
             {categories.map((category) => (
               <button key={category}
                 onClick={() => handleCategoryChange(category)}
@@ -127,14 +127,14 @@ const Projects = () => {
             )}
 
             {filteredProjects.length > 3 && (
-              <div className="flex items-center justify-center gap-2 mt-8">
+              <div className="flex items-center justify-center gap-2 mt-6">
                 {Array.from({ length: Math.max(0, filteredProjects.length - 2) }).map((_, index) => (
                   <button
                     key={index}
                     onClick={() => scrollToIndex(index)}
                     className={`transition-all duration-300 rounded-full ${index === currentIndex
-                        ? 'bg-primary w-6 h-2'
-                        : 'bg-white/30 w-2 h-2 hover:bg-white/50'
+                      ? 'bg-primary w-6 h-2'
+                      : 'bg-white/30 w-2 h-2 hover:bg-white/50'
                       }`}
                     aria-label={`Go to testimonial slide ${index + 1}`}
                   />

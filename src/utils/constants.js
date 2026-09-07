@@ -4,7 +4,7 @@ export const PERSONAL_INFO = {
     image: '',
     title: 'Full Stack Developer',
     resume: '/Muhammad-Ali-Raza.pdf',
-    phone: '0339 9878692',
+    phone: '0370 2735098',
     email: 'alirazadeveloper.02@gamil.com',
     tagline: 'Turning your vision into reality with clean, efficient, scalable code.',
     location: 'Hyderabad, Pakistan',
@@ -22,10 +22,10 @@ export const SOCIAL_LINKS = {
 }
 
 export const HOME_STATS = [
-    { label: 'Projects', value: '10+' },
-    { label: 'Experience', value: '2+Years' },
-    { label: 'Clients', value: '5+' },
-    { label: 'Technologies', value: '15+' },
+    { label: 'Projects', value: '12+' },
+    { label: 'Experience', value: '3+ Years' },
+    { label: 'Clients', value: '8+' },
+    { label: 'Technologies', value: '20+' },
 ]
 
 export const ABOUT_STATS = [
@@ -37,9 +37,9 @@ export const ABOUT_STATS = [
 export const NAV_LINKS = [
     { id: 'home', label: 'Home'},
     { id: 'about', label: 'About'},
-    { id: 'skills', label: 'Skills'},
+    // { id: 'skills', label: 'Skills'},
+    // { id: 'services', label: 'Services'},
     { id: 'projects', label: 'Projects'},
-    { id: 'services', label: 'Services'},
     { id: 'testimonials', label: 'Testimonials'},
     { id: 'contact', label: 'Contact'},
 ]

@@ -57,7 +57,7 @@ const Testinomials = () => {
   }, [activeSection, currentIndex])
 
   return (
-    <section id="testimonials" className="relative bg-black overflow-hidden py-20">
+    <section id="testimonials" className="relative bg-black overflow-hidden py-10">
       <RadGradBg variant="testimonials" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn delay={100}>
@@ -117,11 +117,10 @@ const Testinomials = () => {
                   <button
                     key={index}
                     onClick={() => scrollToIndex(index)}
-                    className={`transition-all duration-300 rounded-full ${
-                      index === currentIndex
+                    className={`transition-all duration-300 rounded-full ${index === currentIndex
                         ? 'bg-primary w-6 h-2'
                         : 'bg-white/30 w-2 h-2 hover:bg-white/50'
-                    }`}
+                      }`}
                     aria-label={`Go to testimonial slide ${index + 1}`}
                   />
                 ))}

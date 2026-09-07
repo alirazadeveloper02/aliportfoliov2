@@ -5,6 +5,7 @@ import { PERSONAL_INFO, HOME_STATS } from '../../utils/constants'
 import { scrollToSection } from '../../hooks/useScrSpy'
 import RadGradBg from '../background/RadGradBg'
 import FadeIn from '../animation/FadeIn'
+import { SiReact, SiNextdotjs, SiNodedotjs, SiExpress, SiTailwindcss, SiMongodb, SiTypescript, SiPython } from 'react-icons/si'
 
 
 const Hero = () => {
@@ -38,7 +39,7 @@ const Hero = () => {
               <button
                 onClick={() => scrollToSection('contact')}
                 className='inline-flex items-center gap-1 mb-8 group'>
-                <div className="relative z-10 bg-white text-black rounded-[17px] px-[26px] py-[13px] text-base font-medium border border-white">
+                <div className="relative z-10 bg-white text-black rounded-[17px] px-[20px] py-[10px] text-base font-medium border border-white hover:scale-95">
                   Get in Touch
                 </div>
               </button>
@@ -60,20 +61,21 @@ const Hero = () => {
           </div>
           <FadeIn delay={200}>
             <div className='relative'>
-              <div className='relative overflow-hidden aspect-square max-w-[500px] ml-auto group'>
-                <div className="absolute inset-0 rounded-full border-10 border-dashed border-primary/60 animate-spin-slow pointer-events-none"></div>
-                
-                <div className="relative rounded-full overflow-hidden m-[2px] h-[calc(100%-2px)]">
-                  <img src="/images/my-image.jpeg" alt="Developer"  className='w-full h-full object-cover' />
+              <div className='relative overflow-hidden rounded-2xl max-w-[500px] ml-auto group'>
+                <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                  <div className='absolute inset-[-2px] bg-linear-to-r from-primary/30 via-primary/30 to-primary/30 animate-spin-slow rounded-2xl'></div>
+                </div>
+                <div className="relative rounded-2xl overflow-hidden m-[2px] h-[calc(100%-2px)]">
+                  <img src="/images/my-image.jpeg" alt="Developer" className='w-full h-full object-cover' />
                 </div>
                 <div className="absolute bottom-5 left-5 z-20">
-                  {/* <FadeIn delay={500}>
+                  <FadeIn delay={500}>
                     <div className="flex items-center gap-4 bg-black/50 backdrop-blur-sm px-6 py-3 border border-white/30 rounded-full">
                       <div className="w-6 h-6 flex items-center justify-center hover:scale-100 transition-transform duration-300">
                         <SiReact className='w-full h-full text-primary' />
                       </div>
                       <div className="w-6 h-6 items-center justify-center hover:scale-100 transition-transform duration-300">
-                        <SiNextdotjs className='w-full h-full text-primary' />
+                        <SiMongodb className='w-full h-full text-primary' />
                       </div>
                       <div className="w-6 h-6 items-center justify-center hover:scale-100 transition-transform duration-300">
                         <SiNodedotjs className='w-full h-full text-primary' />
@@ -85,14 +87,14 @@ const Hero = () => {
                         <SiTailwindcss className='w-full h-full text-primary' />
                       </div>
                       <div className="w-6 h-6 items-center justify-center hover:scale-100 transition-transform duration-300">
-                        <SiMongodb className='w-full h-full text-primary' />
+                        <SiTypescript className='w-full h-full text-primary' />
                       </div>
                       <div className="w-6 h-6 items-center justify-center hover:scale-100 transition-transform duration-300">
-                        <SiTypescript className='w-full h-full text-primary' />
+                        <SiPython className='w-full h-full text-primary' />
                       </div>
 
                     </div>
-                  </FadeIn> */}
+                  </FadeIn>
                 </div>
               </div>
             </div>
@@ -100,7 +102,7 @@ const Hero = () => {
         </div>
       </div>
       <button onClick={() => scrollToSection('about')}
-      className='absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce'>
+        className='absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce'>
         <ChevronDown className='w-9 h-9 text-primary' />
       </button>
 
