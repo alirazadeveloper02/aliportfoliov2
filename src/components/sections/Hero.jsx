@@ -66,7 +66,7 @@ const Hero = () => {
                   <div className='absolute inset-[-2px] bg-linear-to-r from-primary/30 via-primary/30 to-primary/30 animate-spin-slow rounded-2xl'></div>
                 </div>
                 <div className="relative rounded-2xl overflow-hidden m-[2px] h-[calc(100%-2px)]">
-                  <img src="/my-professional-image.png" alt="Developer" className='w-full h-full object-cover' />
+                  <img src="/my-professional.jpeg" alt="Developer" className='w-full h-full object-cover' />
                 </div>
                 <div className="absolute bottom-5 left-5 z-20">
                   <FadeIn delay={500}>
